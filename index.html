@@ -13,6 +13,29 @@
   <body
     class="scroll-smooth bg-gradient-to-b from-slate-900 to-indigo-900 font-sans"
   >
+    <button
+      id="backToTop"
+      class="fixed bottom-4 right-6 bg-black text-white p-4 rounded-full shadow-lg hover:bg-slate-900 focus:outline-none focus:ring focus:ring-indigo-600 hidden"
+      onclick="scrollToTop()"
+    >
+      ↑
+    </button>
+    <script>
+      const backToTopButton = document.getElementById("backToTop");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          backToTopButton.classList.remove("hidden");
+        } else {
+          backToTopButton.classList.add("hidden");
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+    >
     <header>
       <nav
         id="menu"
@@ -21,6 +44,7 @@
         <a href="#expirience" class="hover:text-yellow-200">Experiencia</a>
         <a href="#projects" class="hover:text-yellow-200">Proyectos</a>
         <a href="#about" class="hover:text-yellow-200">Sobre mí</a>
+        <a href="#tecno" class="hover:text-yellow-200">Tecnologias</a>
       </nav>
     </header>
     <main class="px-8">
@@ -34,7 +58,7 @@
             >
               <img
                 class="rounded-full shadow-lg size-40"
-                src="./images/foto.jpg"
+                src="./images/foto1.jpg"
                 alt="Adrian Dev"
               />
             </div>
@@ -144,7 +168,46 @@
           </div>
         </div>
       </section>
+      <section
+        id="about"
+        data-aos="fade-right"
+        class="py-20 mx-auto container lg:max-w-4xl md:max-w-2xl"
+      >
+        <h2 class="text-4xl font-bold text-left text-white mb-8">Sobre mi</h2>
+        <article
+          class="flex flex-col md:flex-row items-center justify-center gap-8 text-white"
+        >
+          <div
+            class="[&>p]:mb-4 [&>p>strong]:text-yellow-200 [&>p>strong]:font-medium text-pretty order-2 md:order-1"
+          >
+            <p>
+              Soy estudiante de la carrera de Sistemas en la
+              <strong>Universidad Argentina de la Empresa</strong>
+            </p>
 
+            <p>
+              donde me especializo en el diseño y la implementación de
+              soluciones tecnológicas. Me considero una persona responsable y
+              proactiva, siempre dispuesta a asumir nuevos desafíos y a trabajar
+              en equipo para alcanzar los mejores resultados. Mi pasión por la
+              tecnología me lleva a mantenerme en constante actualización:
+              <strong
+                >participo de cursos, talleres y seminarios sobre las
+                herramientas y lenguajes de programación más recientes, como
+                Python, JavaScript y frameworks de desarrollo web.</strong
+              >
+            </p>
+            <p>
+              Además, disfruto
+              <strong
+                >compartir mi conocimiento con la comunidad tecnológica</strong
+              >, ya sea por alguna red social o con mis conocidos que se
+              encuentran dentro del mismo ambiente. Mi objetivo es seguir
+              aprendiendo y contribuir al desarrollo de proyectos innovadores.
+            </p>
+          </div>
+        </article>
+      </section>
       <section
         id="expirience"
         data-aos="fade-right"
@@ -311,7 +374,7 @@
               <h4 class="mb-2 text-2xl font-bold text-yellow-200">Zonex</h4>
               <p class="mb-4 text-base">
                 Pagina web Desarrollada con tecnologia Next.js y Tailwind CSS.
-                Zonex es una landigpage diseñada para visualizar los productos
+                Zonex es una landing page diseñada para visualizar los productos
                 de la empresa
               </p>
               <a
@@ -463,52 +526,7 @@
             </div> -->
       </section>
 
-      <section
-        id="about"
-        data-aos="fade-down-right"
-        class="py-20 mx-auto container lg:max-w-4xl md:max-w-2xl"
-      >
-        <h2 class="text-4xl font-bold text-left text-white mb-8">Sobre mi</h2>
-        <article
-          class="flex flex-col md:flex-row items-center justify-center gap-8 text-white"
-        >
-          <div
-            class="[&>p]:mb-4 [&>p>strong]:text-yellow-200 [&>p>strong]:font-medium text-pretty order-2 md:order-1"
-          >
-            <p>
-              Soy estudiante de la carrera de Sistemas en la
-              <strong>Universidad Argentina de la Empresa</strong>
-            </p>
-
-            <p>
-              donde me especializo en el diseño y la implementación de
-              soluciones tecnológicas. Me considero una persona responsable y
-              proactiva, siempre dispuesta a asumir nuevos desafíos y a trabajar
-              en equipo para alcanzar los mejores resultados. Mi pasión por la
-              tecnología me lleva a mantenerme en constante actualización:
-              <strong
-                >participo de cursos, talleres y seminarios sobre las
-                herramientas y lenguajes de programación más recientes, como
-                Python, JavaScript y frameworks de desarrollo web.</strong
-              >
-            </p>
-            <p>
-              Además, disfruto
-              <strong
-                >compartir mi conocimiento con la comunidad tecnológica</strong
-              >, ya sea por alguna red social o con mis conocidos que se
-              encuentran dentro del mismo ambiente. Mi objetivo es seguir
-              aprendiendo y contribuir al desarrollo de proyectos innovadores.
-            </p>
-          </div>
-          <img
-            src="./images/foto.jpg"
-            alt="Pedro Dev"
-            class="w-52 order-1 object-cover p-1 md:order-2 rotate-6 lg:p-2 lg:w-64 rounded-full bg-yellow-500/5 ring-4 ring-white/20"
-          />
-        </article>
-      </section>
-      <section>
+      <section id="tecno">
         <div class="mx-auto container lg:max-w-4xl md:max-w-2xl">
           <h2 class="text-4xl font-bold text-left text-white mb-8">
             Algunas tecnologias que aplico
